@@ -347,7 +347,7 @@ class _LoginScreenState extends State<LoginScreen> {
           await _firestore.collection(role).doc(user.uid).get();
       if (ds.exists) {
         if (role == _selectedRole) {
-          if (ds.data() != null) isNewUser = false;
+          if (ds.data().length > 0) isNewUser = false;
         } else {
           isValidUser = false;
         }

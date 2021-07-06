@@ -3,7 +3,7 @@ import 'package:flutter_spinkit/flutter_spinkit.dart';
 import 'package:lo_rent/app_provider.dart';
 import 'package:lo_rent/constants.dart';
 import 'package:lo_rent/models/service_provider_user.dart';
-import 'package:lo_rent/widgets/add_button.dart';
+import 'package:lo_rent/modules/profile/widgets/add_button.dart';
 import 'package:lo_rent/modules/profile/widgets/company_button.dart';
 import 'package:lo_rent/utilities/routes.dart';
 import 'package:lo_rent/widgets/custom_button.dart';

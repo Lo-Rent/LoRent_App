@@ -2,16 +2,10 @@ import 'package:flutter/material.dart';
 import 'package:lo_rent/constants.dart';
 
 class AddButtonWidget extends StatelessWidget {
-  const AddButtonWidget({
-    Key key,
-    this.text,
-    this.onPressed,
-    this.icon,
-  });
+  const AddButtonWidget({Key key, this.text, this.onPressed});
 
   final String text;
   final Function onPressed;
-  final IconData icon;
 
   @override
   Widget build(BuildContext context) {
@@ -28,7 +22,7 @@ class AddButtonWidget extends StatelessWidget {
             onPressed: this.onPressed,
             child: Row(
               children: [
-                Icon(icon ?? Icons.add_circle_outline, color: kHintTextColor),
+                Icon(Icons.add_circle_outline, color: kHintTextColor),
                 SizedBox(width: 10),
                 Text(
                   this.text,

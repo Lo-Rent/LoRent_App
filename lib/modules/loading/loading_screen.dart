@@ -1,7 +1,6 @@
 import 'dart:async';
 
 import 'package:cloud_firestore/cloud_firestore.dart';
-import 'package:firebase_app_check/firebase_app_check.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
@@ -60,8 +59,6 @@ class _LoadingScreenState extends State<LoadingScreen> {
   void initializeFlutterFire() async {
     try {
       await Firebase.initializeApp();
-      await FirebaseAppCheck.instance
-          .activate(webRecaptchaSiteKey: 'recaptcha-v3-site-key');
       setState(() {
         _auth = FirebaseAuth.instance;
         _user = _auth.currentUser;
@@ -92,7 +89,7 @@ class _LoadingScreenState extends State<LoadingScreen> {
       if (ds.exists) {
         Provider.of<ProviderData>(context, listen: false)
             .saveCurrentUserRole(role);
-        if (ds.data() != null) {
+        if (ds.data().length > 0) {
           print('Go to home screen : $role');
           if (role != availableRoles.last) {
             await Provider.of<ProviderData>(context, listen: false)
