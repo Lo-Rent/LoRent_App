@@ -1,10 +1,5 @@
-import 'dart:io';
-
-import 'package:file_picker/file_picker.dart';
-
 class HouseListingModel {
   HouseListingModel({
-    this.ownerUid,
     this.houseName,
     this.description,
     this.houseType,
@@ -27,10 +22,8 @@ class HouseListingModel {
     this.furnishing,
     this.floorNumber,
     this.parking,
-    this.gallery,
   });
 
-  String ownerUid;
   String houseName;
   String description;
   String houseType;
@@ -42,6 +35,7 @@ class HouseListingModel {
   String state;
   String country;
   String pinCode;
+  //TODO gallery
   String instructions;
   String rentFees;
   String availableForRental;
@@ -53,37 +47,4 @@ class HouseListingModel {
   String furnishing;
   String floorNumber;
   String parking;
-  Map<String, List<String>> gallery;
-
-  Map<String, dynamic> map;
-
-  void toMap() {
-    map = {
-      'houseName': houseName,
-      'description': description,
-      'houseType': houseType,
-      'houseNo': houseNo,
-      'addressLine1': addressLine1,
-      'addressLine2': addressLine2,
-      'locality': locality,
-      'city': city,
-      'state': state,
-      'country': country,
-      'pinCode': pinCode,
-      'instructions': instructions,
-      'rentFees': rentFees,
-      'availableForRental': availableForRental,
-      'builtUpArea': builtUpArea,
-      'bhk': bhk,
-      'security': security,
-      'carpetArea': carpetArea,
-      'ageOfProperty': ageOfProperty,
-      'furnishing': furnishing,
-      'floorNumber': floorNumber,
-      'parking': parking,
-      'gallery': gallery,
-    };
-  }
-
-  void fromMap() {}
 }

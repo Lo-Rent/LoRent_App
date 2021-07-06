@@ -1,4 +1,3 @@
-import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 import 'package:lo_rent/constants.dart';
 import 'package:lo_rent/modules/home/widgets/options_card_widget.dart';
@@ -24,8 +23,6 @@ class HomeScreen extends StatelessWidget {
         leading: Image(
           image: AssetImage(AppImages.NO_BG_LOGO),
         ),
-        //Icon(Icons.sort, color: Colors.black),
-
         // Container(
         //   decoration: BoxDecoration(
         //     image: DecorationImage(
@@ -37,19 +34,13 @@ class HomeScreen extends StatelessWidget {
         // ),
         actions: [
           IconButton(
-            icon: Icon(Icons.notifications_outlined, color: Colors.black),
+            icon: Icon(Icons.notifications),
             onPressed: () => print('Notifications button pressed'),
             splashRadius: 25,
           ),
-          SizedBox(width: 10.0),
           IconButton(
             icon: Icon(Icons.account_circle),
-            onPressed: () {
-              // temporary logout button, just for development purpose, will be replaced by drop down menu
-              FirebaseAuth.instance.signOut();
-              Navigator.pushReplacement(
-                  context, FadeInRoute(routeName: RouteNames.LOGIN));
-            }, //TODO print('Account button pressed'),
+            onPressed: () => print('Account button pressed'),
             splashRadius: 25,
           ),
         ],
