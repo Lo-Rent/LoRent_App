@@ -21,6 +21,7 @@ class TextFieldWidget extends StatefulWidget {
     this.textAlign,
     this.maxLines,
     this.sizedBoxHeight,
+    this.controller,
   }) : super(key: key);
 
   final FormFieldSetter<String> onSaved;
@@ -38,6 +39,7 @@ class TextFieldWidget extends StatefulWidget {
   final Widget suffixIcon;
   final int maxLines;
   final double sizedBoxHeight;
+  final TextEditingController controller;
 
   @override
   _TextFieldWidgetState createState() => _TextFieldWidgetState();
@@ -73,7 +75,8 @@ class _TextFieldWidgetState extends State<TextFieldWidget> {
             keyboardType: widget.keyboardType ?? TextInputType.text,
             onSaved: widget.onSaved,
             validator: widget.validator,
-            initialValue: widget.initialValue ?? null,
+            initialValue: widget.initialValue,
+            controller: widget.controller,
             style: widget.style ?? Theme.of(context).textTheme.bodyText2,
             obscureText: widget.obscureText ?? false,
             textAlign: widget.textAlign ?? TextAlign.start,
