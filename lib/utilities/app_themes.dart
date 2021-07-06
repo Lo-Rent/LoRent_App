@@ -74,7 +74,7 @@ class AppThemes {
             fontFamily: 'Poppins',
             fontSize: 13.0,
             fontWeight: FontWeight.w400,
-            color: kSecondaryColor,
+            color: kPrimaryColor,
             height: 1.2),
         bodyText2: TextStyle(
             fontFamily: 'Poppins',
