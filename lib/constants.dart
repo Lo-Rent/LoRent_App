@@ -5,6 +5,9 @@ import 'package:flutter/material.dart';
 // Name of the app:
 const String kAppName = 'Lo Rent';
 
+// Google Api Key:
+const String kGoogleApiKey = 'AIzaSyBO6bIXZ8iv0oSXfWnjZnlOaEvpdqs-Hvg';
+
 //Colors:
 const Color kPrimaryColor = Colors.white;
 const Color kSecondaryColor = Colors.black;

@@ -251,7 +251,7 @@ class ProviderData extends ChangeNotifier {
       File fileToBeUploaded = File(file.path);
       // await fileToBeUploaded.writeAsBytes(
       //     bytes.buffer.asUint8List(bytes.offsetInBytes, bytes.lengthInBytes));
-      //Uint8List bytes = file.bytes;
+
       print(fileToBeUploaded);
       String fileName = file.name;
       String fileExtension = file.extension;

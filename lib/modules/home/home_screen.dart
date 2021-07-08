@@ -37,7 +37,7 @@ class HomeScreen extends StatelessWidget {
         // ),
         actions: [
           IconButton(
-            icon: Icon(Icons.notifications_outlined),
+            icon: Icon(Icons.notifications),
             onPressed: () => print('Notifications button pressed'),
             splashRadius: 25,
           ),
